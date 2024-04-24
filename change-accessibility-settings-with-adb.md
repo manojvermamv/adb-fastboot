@@ -1,3 +1,6 @@
+# Fetched from
+https://gist.github.com/mrk-han/67a98616e43f86f8482c5ee6dd3faabe
+
 # Using ADB to control Accessbility settings for easier testing with Android Emulators + Real Devices
 
 It's a lot easier to test accessibility on the fly using ADB. This gist attempts to make the days of navigating through the Android device settings UI to change Accessibility settings obsolete.
@@ -101,5 +104,3 @@ Also, `adb shell getprop` is a great way to expose a lot of other properties you
 `adb shell settings put system pointer_location 1`
 
 https://developer.android.com/reference/android/provider/Settings
-
-https://gist.github.com/mrk-han/67a98616e43f86f8482c5ee6dd3faabe
