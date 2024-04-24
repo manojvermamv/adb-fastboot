@@ -101,3 +101,4 @@ Also, `adb shell getprop` is a great way to expose a lot of other properties you
 `adb shell settings put system pointer_location 1`
 
 https://developer.android.com/reference/android/provider/Settings
+https://gist.github.com/mrk-han/67a98616e43f86f8482c5ee6dd3faabe
