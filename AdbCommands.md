@@ -1,37 +1,38 @@
-Fetched from https://gist.github.com/mrk-han/4bb41702f317c2534055d30acaa4ff9b
+# Fetched from
+https://gist.github.com/mrk-han/4bb41702f317c2534055d30acaa4ff9b
 
 
-== Adb Server
+# == Adb Server
 adb kill-server
 adb start-server 
 
-== Adb Reboot
+# == Adb Reboot
 adb reboot
 adb reboot recovery 
 adb reboot-bootloader
 
-== Shell
+# == Shell
 adb shell    // Open or run commands in a terminal on the host Android device.
 
-== Devices
+# == Devices
 adb usb
 adb devices   //show devices attached
 adb connect ip_address_of_device
 
-== Get device android version
+# == Get device android version
 adb shell getprop ro.build.version.release 
 
-== LogCat
+# == LogCat
 adb logcat
 adb logcat -c // clear // The parameter -c will clear the current logs on the device.
 adb logcat -d > [path_to_file] // Save the logcat output to a file on the local system.
 adb bugreport > [path_to_file] // Will dump the whole device information like dumpstate, dumpsys and logcat output.
 
-== Files
+# == Files
 adb push [source] [destination]    // Copy files from your computer to your phone.
 adb pull [device file location] [local file location] // Copy files from your phone to your computer.
 
-== App install
+# == App install
 adb -e install path/to/app.apk
 
 -d                        - directs command to the only connected USB device...
@@ -42,7 +43,7 @@ The flag you decide to use has to come before the actual adb command:
 
 adb devices | tail -n +2 | cut -sf 1 | xargs -IX adb -s X install -r com.myAppPackage // Install the given app on all connected devices.
 
-== Uninstalling app from device
+# == Uninstalling app from device
 adb uninstall com.myAppPackage
 adb uninstall <app .apk name>
 adb uninstall -k <app .apk name> -> "Uninstall .apk withour deleting data"
@@ -52,14 +53,14 @@ adb shell pm clear [package] // Deletes all data associated with a package.
 
 adb devices | tail -n +2 | cut -sf 1 | xargs -IX adb -s X uninstall com.myAppPackage //Uninstall the given app from all connected devices
 
-== Update app
+# == Update app
 adb install -r yourApp.apk  //  -r means re-install the app and keep its data on the device.
 adb install –k <.apk file path on computer> 
 
-== Home button
+# == Home button
 adb shell am start -W -c android.intent.category.HOME -a android.intent.action.MAIN
 
-== Activity Manager
+# == Activity Manager
 adb shell am start -a android.intent.action.VIEW
 adb shell am broadcast -a 'my_action'
 
@@ -81,10 +82,10 @@ adb shell wm density 288
 adb shell wm size reset
 adb shell wm density reset
 
-== Print text
+# == Print text
 adb shell input text 'Wow, it so cool feature'
 
-== Screenshot
+# == Screenshot
 adb shell screencap -p /sdcard/screenshot.png
 
 $ adb shell
@@ -101,7 +102,7 @@ shell@ $ screenrecord --verbose /sdcard/demo.mp4
 shell@ $ exit
 $ adb pull /sdcard/demo.mp4
 
-== Key event
+# == Key event
 adb shell input keyevent 3 // Home btn
 adb shell input keyevent 4 // Back btn
 adb shell input keyevent 5 // Call
