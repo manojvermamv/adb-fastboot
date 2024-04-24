@@ -155,6 +155,11 @@ adb shell cmd -w wifi connect-network Public open                 # Connect to a
 adb shell cmd -w wifi connect-network Redmi9Prime wpa2 password    # Connect to an secured wifi network.
 ```
 
+## Root Commands
+```bash
+adb shell "su -c ls"   # list working directory with su rights.
+adb shell "su -c echo anytext > /data/test.file"
+```
 For more advanced
 
  usage and explanations, please refer to the [ADB documentation](https://developer.android.com/studio/command-line/adb).
