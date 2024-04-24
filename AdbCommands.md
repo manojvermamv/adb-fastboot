@@ -1,6 +1,4 @@
 # ADB Commands Cheat Sheet
-
-# Fetched from
 https://gist.github.com/mrk-han/4bb41702f317c2534055d30acaa4ff9b
 
 
