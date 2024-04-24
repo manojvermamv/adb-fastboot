@@ -11,6 +11,8 @@ adb start-server
 ## ADB Reboot
 ```bash
 adb reboot
+adb reboot -p
+adb shell reboot -p
 adb reboot recovery
 adb reboot bootloader
 adb reboot-bootloader
@@ -24,7 +26,8 @@ adb shell    # Open or run commands in a terminal on the host Android device.
 ## Devices
 ```bash
 adb usb
-adb devices    # Show devices attached
+adb devices                      # Show devices attached
+adb -s serial_id_of_device       # Connect to an adb devices 
 adb connect ip_address_of_device
 ```
 
