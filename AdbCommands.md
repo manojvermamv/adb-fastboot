@@ -155,6 +155,15 @@ adb shell cmd -w wifi connect-network Public open                 # Connect to a
 adb shell cmd -w wifi connect-network Redmi9Prime wpa2 password    # Connect to an secured wifi network.
 ```
 
+## Enable hotspot tethering
+The first command opens the Settings page for Tethering and Hotspot, while the latter simulate key presses: Down and Enter, respectively.
+```bash
+adb shell am start -n com.android.settings/.TetherSettings
+adb shell input keyevent 20     # Press Down
+adb shell input keyevent 66     # Press Enter 
+```
+
+
 ## Root Commands
 ```bash
 adb shell "su -c ls"   # list working directory with su rights.
