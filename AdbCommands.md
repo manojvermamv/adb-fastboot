@@ -12,6 +12,7 @@ adb start-server
 ```bash
 adb reboot
 adb reboot recovery
+adb reboot bootloader
 adb reboot-bootloader
 ```
 
@@ -141,6 +142,14 @@ adb shell monkey -p com.myAppPackage -v 10000 -s 100    # monkey tool generates 
 adb backup    # Create a full backup of your phone and save it to the computer.
 adb restore    # Restore a backup to your phone.
 adb sideload    # Push and flash custom ROMs and zips from your computer.
+```
+
+## Wifi
+```bash
+adb shell svc wifi enable                 # Enable mobile wifi.
+adb shell svc wifi disable                 # Disable mobile wifi.
+adb shell cmd -w wifi connect-network Public open                 # Connect to an open wifi network.
+adb shell cmd -w wifi connect-network Redmi9Prime wpa2 password    # Connect to an secured wifi network.
 ```
 
 For more advanced
