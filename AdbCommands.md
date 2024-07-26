@@ -239,15 +239,15 @@ adb shell dumpsys telephony.registry  # Gives information about wireless communi
 adb shell dumpsys bluetooth_manager   # Gives information about connected bluetooth devices, mac addresses etc.
 ```
 
-** Input
+** Networks
 ```bash
 adb shell dumpsys connectivity         # Provides the internet status and connectivity mode(cellular or Wi-Fi)
 adb shell dumpsys network_management   # Provides all information about device network management
 ```
 
-** Input
+** Package
 ```bash
-adb shell
+adb shell dumpsys package <package_name>   # Provides all the info about your app, ex: Version name/code, first install time, requested permissions, etc
 ```
 
 ## For more advanced
