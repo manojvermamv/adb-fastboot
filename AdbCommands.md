@@ -253,8 +253,10 @@ adb shell dumpsys input      # Dumps the state of the system’s input devices, 
 ## For more advanced
 
  usage and explanations, please refer to the [ADB documentation](https://developer.android.com/studio/command-line/adb).
- 
+ <br>
  Addintional resources.
- https://newandroidbook.com/ddb/S23/
- https://newandroidbook.com/ddb/S23s/
+ <br>https://newandroidbook.com/ddb/S23/
+ <br>https://newandroidbook.com/ddb/S23s/
+ <br>
+ [1]: <https://en.wikipedia.org/wiki/Hobbit#Lifestyle> "Hobbit lifestyles"
  
