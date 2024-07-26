@@ -229,19 +229,20 @@ adb shell dumpsys input      # Dumps the state of the system’s input devices, 
 
 ** Device
 ```bash
-- `adb shell dumpsys cpuinfo`  # Provides info on CPU usage
-- `adb shell dumpsys display`  # Provides info on display
-- `adb shell dumpsys power`  # Provides info on power statistics
-- `adb shell dumpsys alarm`  # Provides info on alarm
-- `adb shell dumpsys location`  # Provides info on location
-- `adb shell dumpsys window displays`  # Provides info like pixel resolution, FPS, and DPI of the device’s display
-- `adb shell dumpsys telephony.registry`  # Gives information about wireless communication related parameters
-- `adb shell dumpsys bluetooth_manager`  # Gives information about connected bluetooth devices, mac addresses etc.
+adb shell dumpsys cpuinfo   # Provides info on CPU usage
+adb shell dumpsys display   # Provides info on display
+adb shell dumpsys power     # Provides info on power statistics
+adb shell dumpsys alarm     # Provides info on alarm
+adb shell dumpsys location  # Provides info on location
+adb shell dumpsys window displays     # Provides info like pixel resolution, FPS, and DPI of the device’s display
+adb shell dumpsys telephony.registry  # Gives information about wireless communication related parameters
+adb shell dumpsys bluetooth_manager   # Gives information about connected bluetooth devices, mac addresses etc.
 ```
 
 ** Input
 ```bash
-adb shell
+adb shell dumpsys connectivity         # Provides the internet status and connectivity mode(cellular or Wi-Fi)
+adb shell dumpsys network_management   # Provides all information about device network management
 ```
 
 ** Input
