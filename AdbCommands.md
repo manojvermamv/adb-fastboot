@@ -183,6 +183,9 @@ adb shell "su -c echo anytext > /data/test.file"
 ```bash
 adb shell settings put secure location_mode 0                   # Enable (Value: 3) / Disable (Value: 0) location.
 adb shell settings put global heads_up_notifications_enabled 0  # Enable (Value: 1) / Disable (Value: 0) pop-up notifications.
+adb shell settings put global always_finish_activities 0        # Enable (Value: 1) / Disable (Value: 0) aggressive finishing of activities and processes.
+adb shell settings put system accelerometer_rotation 0          # Enable (Value: 1) / Disable (Value: 0) auto-rotation of the device.
+adb shell settings put system user_rotation 3                   # 0° clockwise rotation: 0 / 90° clockwise rotation: 1 / 180° clockwise rotation: 2 / 270° clockwise rotation: 3 rotate the device.
 ```
 
 For more advanced
