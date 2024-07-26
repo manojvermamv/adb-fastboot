@@ -222,11 +222,6 @@ adb shell dumpsys activity -p <package_name> permissions  # Provides list of per
 adb shell dumpsys activity -p <package_name> processes  # Provides list of running processes for the given package
 ```
 
-** Input
-```bash
-adb shell dumpsys input      # Dumps the state of the system’s input devices, such as keyboards and touchscreens, and the processing of input events
-```
-
 ** Device
 ```bash
 adb shell dumpsys cpuinfo   # Provides info on CPU usage
@@ -248,6 +243,11 @@ adb shell dumpsys network_management   # Provides all information about device n
 ** Package
 ```bash
 adb shell dumpsys package <package_name>   # Provides all the info about your app, ex: Version name/code, first install time, requested permissions, etc
+```
+
+** Input
+```bash
+adb shell dumpsys input      # Dumps the state of the system’s input devices, such as keyboards and touchscreens, and the processing of input events
 ```
 
 ## For more advanced
