@@ -208,7 +208,17 @@ adb shell getprop ro.system.build.version.sdk    # Provides API level
 [dumpsys](https://developer.android.com/studio/command-line/dumpsys) is a tool that runs on Android devices and offers information on system services. adb shell dumpsys commands provide vital diagnostic output for system services operating on a connected device
 ```bash
 adb shell dumpsys activity -p <package_name>   # Provides complete activity history for the given package
-adb shell dumpsys window windows | grep -E 'mCurrentFocus|mFocusedApp' # Prints current app’s opened activity
+adb shell dumpsys window windows | grep -E 'mCurrentFocus|mFocusedApp'  # Prints current app’s opened activity
+adb shell dumpsys activity -p <package_name> activities  # Provides activity manager activities that contain main stack, running activities, and recent tasks
+adb shell dumpsys activity -p <package_name> activities | grep -E 'mResumedActivity'  # Prints current app’s resumed activity
+adb shell dumpsys activity -p <package_name> services  # Provides list of services running for the given package
+adb shell dumpsys activity -p <package_name> providers  # Provides list of current content providers for the given package
+adb shell dumpsys activity -p <package_name> recents  # Provides list of recent tasks for the given package
+adb shell dumpsys activity -p <package_name> broadcasts  # Provides list of broadcast states for the given package
+adb shell dumpsys activity -p <package_name> intents  # Provides list of pending intents for the given package
+adb shell dumpsys activity -p <package_name> permissions  # Provides list of permissions for the given package
+adb shell dumpsys activity -p <package_name> processes  # Provides list of running processes for the given package
+
 
 ```
 
