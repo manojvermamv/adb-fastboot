@@ -253,3 +253,4 @@ adb shell dumpsys input      # Dumps the state of the system’s input devices, 
 ## For more advanced
 
  usage and explanations, please refer to the [ADB documentation](https://developer.android.com/studio/command-line/adb).
+ extra resources [](https://newandroidbook.com/ddb/S23/).
