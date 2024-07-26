@@ -188,6 +188,22 @@ adb shell settings put system accelerometer_rotation 0          # Enable (Value:
 adb shell settings put system user_rotation 3                   # (0° rotation: 0 / 90° rotation: 1 / 180° rotation: 2 / 270°  rotation: 3) clockwise rotate the device.
 ```
 
+## Get system and device properties using getprop
+```bash
+adb shell getprop -T        # Provides a list of system property types. (Important: this command can only be used on Android version 8.1 and above.)
+adb shell getprop gsm.sim.operator.alpha         # Provides SIM Operator
+adb shell getprop ro.build.version.release       # Provides device android version
+adb shell getprop ro.boot.wifimacaddr            # Provides the WiFi Mac Address
+adb shell getprop ro.product.manufacturer        # Provides Android device manufacturer details
+adb shell getprop ro.vendor.product.model        # Provides Android device product number
+adb shell getprop ro.board.platform              # Provides Soc info
+adb shell getprop ro.oem_unlock_supported        # Provides OEM unlock status
+adb shell getprop ro.vendor.product.model        # Provides device model
+adb shell getprop ro.bootimage.build.fingerprint # Provides Android device build fingerprint
+adb shell getprop ro.cdma.home.operator.alpha    # Provides SIM operator name
+adb shell getprop ro.system.build.version.sdk    # Provides API level
+```
+
 For more advanced
 
  usage and explanations, please refer to the [ADB documentation](https://developer.android.com/studio/command-line/adb).
