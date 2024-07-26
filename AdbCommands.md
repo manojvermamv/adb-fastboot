@@ -256,4 +256,5 @@ adb shell dumpsys input      # Dumps the state of the system’s input devices, 
  
  Addintional resources.
  https://newandroidbook.com/ddb/S23/
+ https://newandroidbook.com/ddb/S23s/
  
