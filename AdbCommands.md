@@ -204,6 +204,12 @@ adb shell getprop ro.cdma.home.operator.alpha    # Provides SIM operator name
 adb shell getprop ro.system.build.version.sdk    # Provides API level
 ```
 
+## Get diagnostic output for system services using dumpsys
+[dumpsys](https://developer.android.com/studio/command-line/dumpsys) is a tool that runs on Android devices and offers information on system services. adb shell dumpsys commands provide vital diagnostic output for system services operating on a connected device
+```bash
+adb shell
+```
+
 For more advanced
 
  usage and explanations, please refer to the [ADB documentation](https://developer.android.com/studio/command-line/adb).
