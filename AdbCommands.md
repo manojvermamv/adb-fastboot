@@ -149,9 +149,9 @@ adb sideload    # Push and flash custom ROMs and zips from your computer.
 
 ## Wifi
 ```bash
-adb shell svc wifi enable                 # Enable mobile wifi.
+adb shell svc wifi enable                  # Enable mobile wifi.
 adb shell svc wifi disable                 # Disable mobile wifi.
-adb shell cmd -w wifi connect-network Public open                 # Connect to an open wifi network.
+adb shell cmd -w wifi connect-network Public open                  # Connect to an open wifi network.
 adb shell cmd -w wifi connect-network Redmi9Prime wpa2 password    # Connect to an secured wifi network.
 ```
 
