@@ -207,7 +207,9 @@ adb shell getprop ro.system.build.version.sdk    # Provides API level
 ## Get diagnostic output for system services using dumpsys
 [dumpsys](https://developer.android.com/studio/command-line/dumpsys) is a tool that runs on Android devices and offers information on system services. adb shell dumpsys commands provide vital diagnostic output for system services operating on a connected device
 ```bash
-adb shell
+adb shell dumpsys activity -p <package_name>   # Provides complete activity history for the given package
+adb shell dumpsys window windows | grep -E 'mCurrentFocus|mFocusedApp' # Prints current app’s opened activity
+
 ```
 
 For more advanced
