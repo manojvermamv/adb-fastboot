@@ -221,11 +221,34 @@ adb shell dumpsys activity -p <package_name> intents  # Provides list of pending
 adb shell dumpsys activity -p <package_name> permissions  # Provides list of permissions for the given package
 adb shell dumpsys activity -p <package_name> processes  # Provides list of running processes for the given package
 ```
-** Bg
+
+** Input
+```bash
+adb shell dumpsys input      # Dumps the state of the system’s input devices, such as keyboards and touchscreens, and the processing of input events
+```
+
+** Device
+```bash
+- `adb shell dumpsys cpuinfo`  # Provides info on CPU usage
+- `adb shell dumpsys display`  # Provides info on display
+- `adb shell dumpsys power`  # Provides info on power statistics
+- `adb shell dumpsys alarm`  # Provides info on alarm
+- `adb shell dumpsys location`  # Provides info on location
+- `adb shell dumpsys window displays`  # Provides info like pixel resolution, FPS, and DPI of the device’s display
+- `adb shell dumpsys telephony.registry`  # Gives information about wireless communication related parameters
+- `adb shell dumpsys bluetooth_manager`  # Gives information about connected bluetooth devices, mac addresses etc.
+```
+
+** Input
 ```bash
 adb shell
 ```
 
-For more advanced
+** Input
+```bash
+adb shell
+```
+
+## For more advanced
 
  usage and explanations, please refer to the [ADB documentation](https://developer.android.com/studio/command-line/adb).
