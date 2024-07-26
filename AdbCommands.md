@@ -178,6 +178,13 @@ adb shell input keyevent 66     # Pressing Enter
 adb shell "su -c ls"   # list working directory with su rights.
 adb shell "su -c echo anytext > /data/test.file"
 ```
+
+## Set system-level preferences
+```bash
+adb shell settings put secure location_mode 0                   # Enable (Value: 3) / Disable (Value: 0) location.
+adb shell settings put global heads_up_notifications_enabled 0  # Enable (Value: 1) / Disable (Value: 0) pop-up notifications.
+```
+
 For more advanced
 
  usage and explanations, please refer to the [ADB documentation](https://developer.android.com/studio/command-line/adb).
