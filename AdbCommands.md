@@ -163,6 +163,15 @@ adb shell input keyevent 20     # Press Down
 adb shell input keyevent 66     # Press Enter 
 ```
 
+## Unlock pin screen lock
+```bash
+adb shell input keyevent 82     # 1. Pressing the lock button
+adb shell input keyevent 66     # 2. Pressing the lock button
+adb shell input keyevent 26     # 3. Pressing the lock button
+adb shell input touchscreen swipe 930 880 930 380      # Swipe UP
+adb shell input text XXXX       # Entering your passcode
+adb shell input keyevent 66     # Pressing Enter
+```
 
 ## Root Commands
 ```bash
