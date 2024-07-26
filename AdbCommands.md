@@ -198,6 +198,7 @@ adb shell getprop ro.product.manufacturer        # Provides Android device manuf
 adb shell getprop ro.vendor.product.model        # Provides Android device product number
 adb shell getprop ro.board.platform              # Provides Soc info
 adb shell getprop ro.oem_unlock_supported        # Provides OEM unlock status
+adb shell getprop ro.crypto.state                # Provides device encryption status
 adb shell getprop ro.vendor.product.model        # Provides device model
 adb shell getprop ro.bootimage.build.fingerprint # Provides Android device build fingerprint
 adb shell getprop ro.cdma.home.operator.alpha    # Provides SIM operator name
