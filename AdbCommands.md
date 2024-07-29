@@ -196,7 +196,8 @@ adb shell 'am broadcast -a org.example.app.sp.CLEAR --ez restart true'
 
 ## Monkey
 ```bash
-adb shell monkey -p com.myAppPackage -v 10000 -s 100    # monkey tool generates 10,000 random events on the real device
+adb shell monkey -p app.package.name                   # Starts the specified package
+adb shell monkey -p app.package.name -v 10000 -s 100   # Monkey tool generates 10,000 random events on the real device
 ```
 
 ## Other
@@ -293,6 +294,7 @@ adb shell pm list features        #	List phone features
 adb shell service list            # List all services
 adb shell ps                      # Print process status
 adb shell wm size                 # Displays the current screen resolution
+adb shell wm size WxH             # Sets the screen resolution to WxH
 adb shell dumpsys iphonesybinfo   # Get the IMEI
 adb shell dumpsys batterystats    # Collects battery data from your device
 adb shell dumpsys battery   # Provides info on battery usage
