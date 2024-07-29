@@ -11,6 +11,7 @@ adb devices -l                    # List of connected devices by product/model
 adb connect <IP>:<PORT>           # Connect to an remote adb device via ipaddress (Note: By default port is 5555)
 adb -s <deviceName> <command>     # Redirect command to specific device (Ex: adb -s 127.0.0.1:5555 shell)
 adb –d <command>                  # Directs command to only attached USB device
+adb wait-for-device
 ```
 
 ## ADB Server
