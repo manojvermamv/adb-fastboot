@@ -5,10 +5,12 @@ https://gist.github.com/mrk-han/4bb41702f317c2534055d30acaa4ff9b
 ## ADB Devices
 ```bash
 adb usb
-adb devices                       # Show devices attached
+adb root                          # Restarts adbd with root permissions
+adb devices                       # List of connected devices
+adb devices -l                    # List of connected devices by product/model
 adb connect <IP>:<PORT>           # Connect to an remote adb device via ipaddress (Note: By default port is 5555)
-adb -s serial_id_of_device        # Connect to an adb devices            
-adb -s 127.0.0.1:5555 shell       # Connect and start shell
+adb -s <deviceName> <command>     # Redirect command to specific device (Ex: adb -s 127.0.0.1:5555 shell)
+adb –d <command>                  # Directs command to only attached USB device
 ```
 
 ## ADB Server
@@ -40,17 +42,18 @@ adb reboot bootloader
 adb reboot-bootloader
 ```
 
-## Get Device Android Version
-```bash
-adb shell getprop ro.build.version.release
-```
-
 ## LogCat
 ```bash
-adb logcat
-adb logcat -c    # clear    The parameter -c will clear the current logs on the device.
+adb logcat [options] [filter] [filter]     # View device log
+adb logcat -c                     # clear The parameter -c will clear the current logs on the device.
 adb logcat -d > [path_to_file]    # Save the logcat output to a file on the local system.
 adb bugreport > [path_to_file]    # Will dump the whole device information like dumpstate, dumpsys, and logcat output.
+```
+
+## Permissions
+```bash
+adb shell permissions groups               # List permission groups definitions
+adb shell list permissions -g -r           # List permissions details
 ```
 
 ## Files
@@ -62,6 +65,7 @@ adb pull [device file location] [local file location]    # Copy files from your 
 ## App Install
 ```bash
 adb -e install path/to/app.apk
+adb shell install <apk/path>
 ```
 
 ## Uninstalling App from Device
