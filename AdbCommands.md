@@ -101,8 +101,20 @@ adb shell am broadcast -a 'my_action'
 ```
 
 ## Package Info
-adb shell pm list packages (Alternative CMD: adb shell cmd package list packages)<br>
-adb shell pm list packages [-f] [-d] [-e] [-s] [-3] [-i] [-l] [-u] [-U] [--uid UID] [--user USER_ID] [FILTER]
+<br>adb shell pm list packages [-f] [-d] [-e] [-s] [-3] [-i] [-l] [-u] [-U] [--uid UID] [--user USER_ID] [FILTER]
+<br>Prints all packages; optionally only those whose name contains the text in FILTER.
+    <br>Options:
+    <br>-f: see their associated file
+    <br>-d: filter to only show disabled packages
+    <br>-e: filter to only show enabled packages
+    <br>-s: filter to only show system packages
+    <br>-3: filter to only show third party packages
+    <br>-i: see the installer for the packages
+    <br>-l: ignored (used for compatibility with older releases)
+    <br>-U: also show the package UID
+    <br>-u: also include uninstalled packages
+    <br>--uid UID: filter to only show packages with the given UID
+    <br>--user USER_ID: only list packages belonging to the given user
 ```bash
 adb shell pm list packages                  # Lists package names
 adb shell pm list packages -r               # Lists package name + path to apks
