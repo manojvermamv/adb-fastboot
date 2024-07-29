@@ -53,8 +53,11 @@ adb bugreport > [path_to_file]    # Will dump the whole device information like 
 
 ## Permissions
 ```bash
-adb shell permissions groups               # List permission groups definitions
-adb shell list permissions -g -r           # List permissions details
+adb shell permissions groups                           # List permission groups definitions
+adb shell list permissions -g -r                       # List permissions details
+adb shell pm grant [package_name] [Permission]         # Grant a permission to an app. 
+adb shell pm revoke [package_name] [Permission]        # Revoke a permission from an app.
+adb shell pm reset-permissions -p app.package.name
 ```
 
 ## Files
@@ -299,7 +302,12 @@ adb shell pm list features        # List phone features
 adb shell service list            # List all services
 adb shell ps                      # Print process status
 adb shell wm size                 # Displays the current screen resolution
-adb shell wm size WxH             # Sets the screen resolution to WxH
+
+adb shell wm size WidthxHeight    # Set the screen resolution to WxH
+adb shell wm density 288          # Set the screen dessity (dpi)
+adb shell wm size reset           # Reset to default
+adb shell wm density reset        # Reset to default
+
 adb shell dumpsys iphonesybinfo   # Get the IMEI
 adb shell dumpsys batterystats    # Collects battery data from your device
 adb shell dumpsys battery   # Provides info on battery usage
