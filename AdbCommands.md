@@ -100,6 +100,21 @@ adb shell am start -a android.intent.action.VIEW
 adb shell am broadcast -a 'my_action'
 ```
 
+## Package Info
+adb shell pm list packages (Alternative CMD: adb shell cmd package list packages)
+adb shell pm list packages [-f] [-d] [-e] [-s] [-3] [-i] [-l] [-u] [-U] [--uid UID] [--user USER_ID] [FILTER]
+```bash
+adb shell pm list packages                  # Lists package names
+adb shell pm list packages -r               # Lists package name + path to apks
+adb shell pm list packages -3               # Lists third party package names
+adb shell pm list packages -s               # Lists only system packages
+adb shell pm list packages -u               # Lists package names + uninstalled
+adb shell pm list packages                  # Lists package names
+adb shell pm dump <package_name>            # Lists info on one package
+adb shell pm path <package_name>            # Path to the apk file
+```
+
+
 ## Print Text
 ```bash
 adb shell input text 'Wow, it's so cool feature'
