@@ -2,13 +2,35 @@
 https://gist.github.com/mrk-han/4bb41702f317c2534055d30acaa4ff9b
 
 
+## ADB Devices
+```bash
+adb usb
+adb devices                       # Show devices attached
+adb -s serial_id_of_device        # Connect to an adb devices
+adb -s 127.0.0.1                  # Connect to an remote adb device via ipaddress (Note: By default port is 5555)
+adb -s 127.0.0.1:5555
+adb connect 127.0.0.1:5555
+```
+
 ## ADB Server
 ```bash
 adb kill-server
 adb start-server
 ```
 
-## ADB Reboot
+## Port Tunneling
+In case the adb port is only accessible from localhost in the android device but you have access via SSH, you can forward the port 5555 and connect via adb:
+```bash
+ssh -i ssh_key username@10.10.10.10 -L 5555:127.0.0.1:5555 -p 2222
+adb connect 127.0.0.1:5555
+```
+
+## ADB Shell
+```bash
+adb shell    # Open or run commands in a terminal on the host Android device.
+```
+
+## ADB Reboot Device
 ```bash
 adb reboot
 adb reboot -p
@@ -16,19 +38,6 @@ adb shell reboot -p
 adb reboot recovery
 adb reboot bootloader
 adb reboot-bootloader
-```
-
-## Shell
-```bash
-adb shell    # Open or run commands in a terminal on the host Android device.
-```
-
-## Devices
-```bash
-adb usb
-adb devices                      # Show devices attached
-adb -s serial_id_of_device       # Connect to an adb devices 
-adb connect ip_address_of_device
 ```
 
 ## Get Device Android Version
@@ -77,9 +86,13 @@ adb shell am start -W -c android.intent.category.HOME -a android.intent.action.M
 
 ## Activity Manager
 ```bash
+adb shell am start [<options>]          # Start an activity. Without options you can see the help menu
+adb shell am startservice [<options>]   # Start a service. Without options you can see the help menu
+adb shell am broadcast [<options>]      # Send a broadcast. Without options you can see the help menu
+
+adb shell am start -a android.intent.action.CALL -d tel:+972527300294    # Make a call
 adb shell am start -a android.intent.action.VIEW
 adb shell am broadcast -a 'my_action'
-adb shell am start -a android.intent.action.CALL -d tel:+972527300294    # Make a call
 ```
 
 ## Print Text
