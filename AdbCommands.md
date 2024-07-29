@@ -232,6 +232,9 @@ adb shell dumpsys activity -p <package_name> processes  # Provides list of runni
 
 ** Device
 ```bash
+adb shell dumpsys batterystats # Collects battery data from your device
+adb shell dumpsys battery   # Provides info on battery usage
+adb shell dumpsys meminfo   # Provides info on memory usage
 adb shell dumpsys cpuinfo   # Provides info on CPU usage
 adb shell dumpsys display   # Provides info on display
 adb shell dumpsys power     # Provides info on power statistics
