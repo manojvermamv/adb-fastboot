@@ -60,6 +60,7 @@ adb shell list permissions -g -r           # List permissions details
 ```bash
 adb push [source] [destination]    # Copy files from your computer to your phone.
 adb pull [device file location] [local file location]    # Copy files from your phone to your computer.
+run-as <package> cat <file>        # Access the private package files
 ```
 
 ## App Install
@@ -234,6 +235,7 @@ adb shell getprop ro.system.build.version.sdk    # Provides API level
 
 ** Activities
 ```bash
+adb shell dumpsys activity <package_name>/<activity_name>  # Provides complete activity info
 adb shell dumpsys activity -p <package_name>   # Provides complete activity history for the given package
 adb shell dumpsys window windows | grep -E 'mCurrentFocus|mFocusedApp'  # Prints current app’s opened activity
 adb shell dumpsys activity -p <package_name> activities  # Provides activity manager activities that contain main stack, running activities, and recent tasks
@@ -247,9 +249,18 @@ adb shell dumpsys activity -p <package_name> permissions  # Provides list of per
 adb shell dumpsys activity -p <package_name> processes  # Provides list of running processes for the given package
 ```
 
-** Device
+** Device Info
 ```bash
-adb shell dumpsys batterystats # Collects battery data from your device
+adb get-statе                     # Print device state
+adb get-serialno                  # Get the serial number
+adb shell netstat                 # List TCP connectivity
+adb shell pwd                     # Print current working directory
+adb shell pm list features        #	List phone features
+adb shell service list            # List all services
+adb shell ps                      # Print process status
+adb shell wm size                 # Displays the current screen resolution
+adb shell dumpsys iphonesybinfo   # Get the IMEI
+adb shell dumpsys batterystats    # Collects battery data from your device
 adb shell dumpsys battery   # Provides info on battery usage
 adb shell dumpsys meminfo   # Provides info on memory usage
 adb shell dumpsys cpuinfo   # Provides info on CPU usage
