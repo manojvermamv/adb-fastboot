@@ -101,7 +101,7 @@ adb shell am broadcast -a 'my_action'
 ```
 
 ## Package Info
-adb shell pm list packages (Alternative CMD: adb shell cmd package list packages)
+adb shell pm list packages (Alternative CMD: adb shell cmd package list packages)<br>
 adb shell pm list packages [-f] [-d] [-e] [-s] [-3] [-i] [-l] [-u] [-U] [--uid UID] [--user USER_ID] [FILTER]
 ```bash
 adb shell pm list packages                  # Lists package names
