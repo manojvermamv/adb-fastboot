@@ -6,10 +6,9 @@ https://gist.github.com/mrk-han/4bb41702f317c2534055d30acaa4ff9b
 ```bash
 adb usb
 adb devices                       # Show devices attached
-adb -s serial_id_of_device        # Connect to an adb devices
-adb -s 127.0.0.1                  # Connect to an remote adb device via ipaddress (Note: By default port is 5555)
-adb -s 127.0.0.1:5555
-adb connect <IP>:<PORT>
+adb connect <IP>:<PORT>           # Connect to an remote adb device via ipaddress (Note: By default port is 5555)
+adb -s serial_id_of_device        # Connect to an adb devices            
+adb -s 127.0.0.1:5555 shell       # Connect and start shell
 ```
 
 ## ADB Server
