@@ -87,9 +87,16 @@ adb shell am start -a android.intent.action.CALL -d tel:+972527300294    # Make 
 adb shell input text 'Wow, it's so cool feature'
 ```
 
-## Screenshot
+## Screenshot/Screenrecord
 ```bash
-adb shell screencap -p /sdcard/screenshot.png
+adb shell screencap -p /sdcard/screenshot.png     # Taking a screenshot of a device display.
+
+adb shell screenrecord /sdcard/demo.mp4           # Taking a screenrecord of a device display. Optional args as below
+adb shell screenrecord --size <WIDTHxHEIGHT>
+adb shell screenrecord --bit-rate <RATE>
+adb shell screenrecord --time-limit <TIME>        # Sets the maximum recording time, in seconds. The default and maximum value is 180 (3 minutes).
+adb shell screenrecord --rotate                   # Rotates 90 degrees
+adb shell screenrecord --verbose
 ```
 
 ## Key Event
