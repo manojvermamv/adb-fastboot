@@ -68,21 +68,21 @@ run-as <package> cat <file>        # Access the private package files
 ```bash
 adb -e install path/to/app.apk
 adb shell install <apk/path>
+adb devices | tail -n +2 | cut -sf 1 | xargs -IX adb -s X install -r apk_file_path.apk  # Install the given app on all connected devices.
 ```
 
 ## Uninstalling App from Device
 ```bash
-adb uninstall com.myAppPackage
-adb uninstall <app .apk name>
-adb uninstall -k <app .apk name>    # Uninstall .apk without deleting data
-adb shell pm uninstall com.example.MyApp
-adb shell pm clear [package]    # Deletes all data associated with a package.
+adb uninstall app.package.name              # Uninstall app
+adb uninstall -k app.package.name           # Uninstall app without deleting data
+adb shell pm clear app.package.name         # Deletes all data associated with a package.
+adb shell pm uninstall app.package.name
 ```
 
 ## Update App
 ```bash
-adb install -r yourApp.apk    # -r means re-install the app and keep its data on the device.
-adb install –k <.apk file path on computer>
+adb install -r apk_file_path.apk    # -r means re-install the app and keep its data on the device.
+adb install –k apk_file_path_on_computer
 ```
 
 ## Device Backups 
