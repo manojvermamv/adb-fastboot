@@ -290,7 +290,7 @@ adb get-statе                     # Print device state
 adb get-serialno                  # Get the serial number
 adb shell netstat                 # List TCP connectivity
 adb shell pwd                     # Print current working directory
-adb shell pm list features        #	List phone features
+adb shell pm list features        # List phone features
 adb shell service list            # List all services
 adb shell ps                      # Print process status
 adb shell wm size                 # Displays the current screen resolution
