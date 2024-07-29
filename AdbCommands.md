@@ -101,7 +101,7 @@ adb shell am broadcast -a 'my_action'
 ```
 
 ## Package Info
-<br>adb shell pm list packages [-f] [-d] [-e] [-s] [-3] [-i] [-l] [-u] [-U] [--uid UID] [--user USER_ID] [FILTER]
+adb shell pm list packages [-f] [-d] [-e] [-s] [-3] [-i] [-l] [-u] [-U] [--uid UID] [--user USER_ID] [FILTER]
 <br>Prints all packages; optionally only those whose name contains the text in FILTER.
     <br>Options:
     <br>-f: see their associated file
