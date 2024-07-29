@@ -103,6 +103,10 @@ adb shell am start -a android.intent.action.VIEW -d URL       # Opens URL
 adb shell am start -t image/* -a android.intent.action.VIEW   # Opens gallery
 adb shell am start -W -c android.intent.category.HOME -a android.intent.action.MAIN   # Home Button
 
+adb shell am start -a android.intent.action.SENDTO -d sms:+910123456789 --es sms_body "Test Message" --ez exit_on_sent true
+adb shell input keyevent 22
+adb shell input keyevent 66
+
 adb shell am start -a android.intent.action.CALL -d tel:+972527300294    # Make a call
 adb shell am start -a android.intent.action.VIEW
 adb shell am broadcast -a 'my_action'
