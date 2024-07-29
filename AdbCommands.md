@@ -9,11 +9,12 @@ adb devices                       # Show devices attached
 adb -s serial_id_of_device        # Connect to an adb devices
 adb -s 127.0.0.1                  # Connect to an remote adb device via ipaddress (Note: By default port is 5555)
 adb -s 127.0.0.1:5555
-adb connect 127.0.0.1:5555
+adb connect <IP>:<PORT>
 ```
 
 ## ADB Server
 ```bash
+adb tcpip 5555                    # Start adb server on port 5555
 adb kill-server
 adb start-server
 ```
