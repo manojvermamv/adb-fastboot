@@ -84,9 +84,12 @@ adb install -r yourApp.apk    # -r means re-install the app and keep its data on
 adb install –k <.apk file path on computer>
 ```
 
-## Home Button
+## Device Backups 
 ```bash
-adb shell am start -W -c android.intent.category.HOME -a android.intent.action.MAIN
+adb backup -apk -all -f backup.ab                  # Backup settings and apps
+adb backup -apk -shared -all -f backup.ab          # Backup settings, apps and shared storage
+adb backup -apk -nosystem -all -f backup.ab        # Backup only non-system apps
+adb restore backup.ab                              # Restore a previous backup
 ```
 
 ## Activity Manager
@@ -94,6 +97,10 @@ adb shell am start -W -c android.intent.category.HOME -a android.intent.action.M
 adb shell am start [<options>]          # Start an activity. Without options you can see the help menu
 adb shell am startservice [<options>]   # Start a service. Without options you can see the help menu
 adb shell am broadcast [<options>]      # Send a broadcast. Without options you can see the help menu
+
+adb shell am start -a android.intent.action.VIEW -d URL       # Opens URL
+adb shell am start -t image/* -a android.intent.action.VIEW   # Opens gallery
+adb shell am start -W -c android.intent.category.HOME -a android.intent.action.MAIN   # Home Button
 
 adb shell am start -a android.intent.action.CALL -d tel:+972527300294    # Make a call
 adb shell am start -a android.intent.action.VIEW
