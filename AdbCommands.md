@@ -176,6 +176,7 @@ adb shell input keyevent 277 / 278 /279    # Cut/Copy/Paste
 ```
 
 ## Shared Preferences
+Usage and explanations, please refer to the [PreferencesEditor](https://github.com/jfsso/PreferencesEditor/tree/master).
 ```bash
 # replace org.example.app with your application id
 
