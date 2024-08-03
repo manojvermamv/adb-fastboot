@@ -64,9 +64,10 @@ adb shell pm grant com.android.package android.permission.READ_SMS
 
 ## Files
 ```bash
+run-as <package> cat <file>        # Access the private package files
 adb push [source] [destination]    # Copy files from your computer to your phone.
 adb pull [device file location] [local file location]    # Copy files from your phone to your computer.
-run-as <package> cat <file>        # Access the private package files
+adb shell find /sdcard/ -iname "*file_name*" -type f     # Find files in android file system
 ```
 
 ## App Install
