@@ -57,7 +57,9 @@ adb shell permissions groups                           # List permission groups 
 adb shell list permissions -g -r                       # List permissions details
 adb shell pm grant [package_name] [Permission]         # Grant a permission to an app. 
 adb shell pm revoke [package_name] [Permission]        # Revoke a permission from an app.
-adb shell pm reset-permissions -p app.package.name
+adb shell pm reset-permissions -p [package_name]
+Example:
+adb shell pm grant com.android.package android.permission.READ_SMS
 ```
 
 ## Files
