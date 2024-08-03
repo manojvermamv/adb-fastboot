@@ -139,10 +139,11 @@ adb shell pm list packages -u               # Lists package names + uninstalled
 adb shell pm list packages                  # Lists package names
 adb shell pm dump <package_name>            # Lists info on one package
 adb shell pm path <package_name>            # Path to the apk file
+# Print all apks paths
+adb shell pm list packages | sed -e "s/package://" | while read x; do cmd package resolve-activity $x | grep -w "sourceDir=" | grep -v "Apks not found"; done
 # Print all applications with its launcher activity
 adb shell pm list packages | sed -e "s/package://" | while read x; do cmd package resolve-activity --brief $x | tail -n 1 | grep -v "No activity found"; done
 ```
-
 
 ## Print Text
 ```bash
