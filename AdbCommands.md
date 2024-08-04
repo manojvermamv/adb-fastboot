@@ -316,13 +316,13 @@ adb shell wm size reset           # Reset to default
 adb shell wm density reset        # Reset to default
 
 adb shell dumpsys batterystats    # Collects battery data from your device
-adb shell dumpsys battery   # Provides info on battery usage
-adb shell dumpsys meminfo   # Provides info on memory usage
-adb shell dumpsys cpuinfo   # Provides info on CPU usage
-adb shell dumpsys display   # Provides info on display
-adb shell dumpsys power     # Provides info on power statistics
-adb shell dumpsys alarm     # Provides info on alarm
-adb shell dumpsys location  # Provides info on location
+adb shell dumpsys battery         # Provides info on battery usage
+adb shell dumpsys meminfo         # Provides info on memory usage
+adb shell dumpsys cpuinfo         # Provides info on CPU usage
+adb shell dumpsys display         # Provides info on display
+adb shell dumpsys power           # Provides info on power statistics
+adb shell dumpsys alarm           # Provides info on alarm
+adb shell dumpsys location        # Provides info on location
 adb shell dumpsys window displays         # Provides info like pixel resolution, FPS, and DPI of the device’s display
 adb shell dumpsys telephony.registry      # Gives information about wireless communication related parameters
 adb shell dumpsys bluetooth_manager       # Gives information about connected bluetooth devices, mac addresses etc.
