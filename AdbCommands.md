@@ -323,9 +323,9 @@ adb shell dumpsys display         # Provides info on display
 adb shell dumpsys power           # Provides info on power statistics
 adb shell dumpsys alarm           # Provides info on alarm
 adb shell dumpsys location        # Provides info on location
-adb shell dumpsys window displays         # Provides info like pixel resolution, FPS, and DPI of the device’s display
-adb shell dumpsys telephony.registry      # Gives information about wireless communication related parameters
-adb shell dumpsys bluetooth_manager       # Gives information about connected bluetooth devices, mac addresses etc.
+adb shell dumpsys window displays                                                 # Provides info like pixel resolution, FPS, and DPI of the device’s display
+adb shell dumpsys telephony.registry                                              # Gives information about wireless communication related parameters
+adb shell "dumpsys bluetooth_manager | sed -n '/Bonded devices:/,/^$/p'"          # Gives information about connected bluetooth devices, mac addresses etc.
 
 adb shell settings get secure android_id                                          # Get the Android ID
 adb shell "service call iphonesubinfo 1 | cut -c 52-66 | tr -d '.[:space:]'"      # Get the IMEI
