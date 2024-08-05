@@ -96,6 +96,7 @@ adb install –k apk_file_path_on_computer
 adb backup -apk -all -f backup.ab                  # Backup settings and apps
 adb backup -apk -shared -all -f backup.ab          # Backup settings, apps and shared storage
 adb backup -apk -nosystem -all -f backup.ab        # Backup only non-system apps
+adb backup -apk [package_name] -f backup_app.ab    # Backup single app data
 adb restore backup.ab                              # Restore a previous backup
 ```
 
