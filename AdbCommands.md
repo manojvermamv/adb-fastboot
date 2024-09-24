@@ -51,6 +51,13 @@ adb logcat -d > [path_to_file]    # Save the logcat output to a file on the loca
 adb bugreport > [path_to_file]    # Will dump the whole device information like dumpstate, dumpsys, and logcat output.
 ```
 
+## Background execution
+nohup (no hangup) allows the command to run even after the terminal is closed
+```bash
+nohup some_command > /dev/null 2>&1&        # Run a command that survives the end of its terminal.
+```
+
+
 ## Permissions
 ```bash
 adb shell permissions groups                           # List permission groups definitions
